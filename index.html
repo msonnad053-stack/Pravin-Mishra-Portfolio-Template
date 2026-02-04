@@ -602,9 +602,23 @@
       <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-        <p>Pravin Mishra Portfolio v1.0 — Deployed on 04-Feb-2026 — By Mahesh Sonnad</p>
+        <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate"> 03-Feb-2026</span> — By Mahesh Sonnad</p>
       </div>
+      <script>
+        // Update deploy date
+        const dateUpdater = {
+          update: function () {
+            this.element.textContent = new Date().toLocaleDateString();
+          },
+          element: document.getElementById("deployDate")
+        };
+        dateUpdater.update();
 
+        // Update current year
+        document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+  
+</script>
     </div>
   </footer>
 
